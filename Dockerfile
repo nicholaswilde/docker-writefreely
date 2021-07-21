@@ -2,17 +2,14 @@ FROM ghcr.io/linuxserver/baseimage-ubuntu:bionic as base
 ARG VERSION
 WORKDIR /tmp
 COPY ./checksums.txt .
+# hadolint ignore=DL3009
 RUN \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install -y --no-install-recommends \
     wget=1.19.4-1ubuntu2.2 && \
   echo "**** cleanup ****" && \
-  apt-get clean && \
-  rm -rf \
-    /tmp/* \
-    /var/lib/apt/lists/ \
-    /var/tmp/*
+  apt-get clean
 
 FROM base as base_amd64
 ARG VERSION
@@ -50,7 +47,7 @@ COPY --from=base_arm64 /app /app
 
 FROM base as base_arm
 ARG VERSION
-ARG FILENAME="writefreely_${VERSION}_linux_arm7.tar.gz"
+ARG FILENAME="writefreely_${VERSION}_linux_arm.tar.gz"
 WORKDIR /tmp
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
