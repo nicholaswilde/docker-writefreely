@@ -1,5 +1,17 @@
 #!/usr/bin/with-contenv bash
 
-# permissions
-chown -R abc:abc \
-	/config
+# copy config
+[[ ! -e /config/config.ini ]] && \
+  cp /defaults/config.ini /config/config.ini
+
+# Create symlink of config.ini if doesn't exist
+[[ ! -L /app/config.ini ]] && \
+  ln -s /config/config.ini /app/config.ini
+
+# copy database
+[[ ! -e /data/app.db ]] && \
+  cp /defaults/app.db /data/app.db
+
+# Create symlink of app.db if doesn't exist
+[[ ! -L /app/app.db ]] && \
+  ln -s /data/app.db /app/app.db

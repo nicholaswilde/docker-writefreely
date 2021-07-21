@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+cd /app || exit
+
+# create keys
+[[ ! -e email.aes256 ]] && \
+  /app/writefreely keys generate

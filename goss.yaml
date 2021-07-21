@@ -1,14 +1,17 @@
 ---
 port:
-  tcp6:3000:
+  tcp6:8080:
     listening: true
 
 process:
-  node:
+  writefreely:
     running: true
 
 http:
-  http://localhost:3000:
+  http://localhost:8080:
     status: 200
+    allow-insecure: false
+    no-follow-redirects: false
+    timeout: 0
     body:
-      - <title>Todo App</title>
+      - <title>blog</title>

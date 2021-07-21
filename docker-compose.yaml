@@ -1,16 +1,15 @@
 ---
 version: "2.1"
 services:
-  template:
-    image: nicholaswilde/template:latest
-    container_name: template-default
+  writefreely:
+    image: nicholaswilde/writefreely:0.13.1-ls1
+    container_name: writefreely-default
     environment:
       - TZ=America/Los_Angeles
       - PUID=1000
       - PGID=1000
     ports:
-      - 3000:3000
-    restart: unless-stopped
+      - 8080:8080
     volumes:
       - app:/app
       - config:/config

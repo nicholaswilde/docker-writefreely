@@ -1,12 +1,12 @@
-# Docker Template
-[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/nicholaswilde/template)](https://hub.docker.com/r/nicholaswilde/template)
-[![Docker Pulls](https://img.shields.io/docker/pulls/nicholaswilde/template)](https://hub.docker.com/r/nicholaswilde/template)
-[![GitHub](https://img.shields.io/github/license/nicholaswilde/docker-template)](./LICENSE)
-[![ci](https://github.com/nicholaswilde/docker-template/workflows/ci/badge.svg)](https://github.com/nicholaswilde/docker-template/actions?query=workflow%3Aci)
-[![lint](https://github.com/nicholaswilde/docker-template/workflows/lint/badge.svg?branch=main)](https://github.com/nicholaswilde/docker-template/actions?query=workflow%3Alint)
+# Docker WriteFreely
+[![Docker Image Version (latest by date)](https://img.shields.io/docker/v/nicholaswilde/writefreely)](https://hub.docker.com/r/nicholaswilde/writefreely)
+[![Docker Pulls](https://img.shields.io/docker/pulls/nicholaswilde/writefreely)](https://hub.docker.com/r/nicholaswilde/writefreely)
+[![GitHub](https://img.shields.io/github/license/nicholaswilde/docker-writefreely)](./LICENSE)
+[![ci](https://github.com/nicholaswilde/docker-writefreely/workflows/ci/badge.svg)](https://github.com/nicholaswilde/docker-writefreely/actions?query=workflow%3Aci)
+[![lint](https://github.com/nicholaswilde/docker-writefreely/workflows/lint/badge.svg?branch=main)](https://github.com/nicholaswilde/docker-writefreely/actions?query=workflow%3Alint)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
-A multi-architecture image for [template](https://github.com/nicholaswilde/docker-template).
+A multi-architecture image for [writefreely](https://github.com/writefreely/writefreely).
 
 ## Architectures
 
@@ -23,13 +23,13 @@ A multi-architecture image for [template](https://github.com/nicholaswilde/docke
 
 ```bash
 $ docker run -d \
-  --name=template-default \
+  --name=writefreely-default \
   -e TZ=America/Los_Angeles `# optional` \
   -e PUID=1000  `# optional` \
   -e PGID=1000   `# optional` \
-  -p 3000:3000 \
+  -p 8080:8080 \
   --restart unless-stopped \
-  nicholaswilde/template
+  nicholaswilde/writefreely
 ```
 
 ### docker-compose
