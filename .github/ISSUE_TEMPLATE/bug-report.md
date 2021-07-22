@@ -1,15 +1,13 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: '[chart name] bug description'
-labels: :bug: bug
+title: '[bug]'
+labels: ':bug: bug'
 assignees: 'nicholaswilde'
 
 ---
 
-# Details
-
-**Image name and tag:**
+**Container name and tag:**
 
 <!-- Note: This should be the container image version you have deployed. e.g. linuxserver/jackett:v0.16.2106 -->
 
