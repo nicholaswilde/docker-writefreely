@@ -47,7 +47,7 @@ COPY --from=base_arm64 /app /app
 
 FROM base as base_arm
 ARG VERSION
-ARG FILENAME="writefreely_${VERSION}_linux_arm.tar.gz"
+ARG FILENAME="writefreely_${VERSION}_linux_arm7.tar.gz"
 WORKDIR /tmp
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
